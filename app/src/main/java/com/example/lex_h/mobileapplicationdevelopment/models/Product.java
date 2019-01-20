@@ -10,22 +10,20 @@ import com.example.lex_h.mobileapplicationdevelopment.R;
 import java.io.Serializable;
 import java.sql.Blob;
 
-@Entity(tableName = "product")
+
 public class Product implements Serializable {
 
-    @PrimaryKey(autoGenerate = true)
     int id;
-    @ColumnInfo(name = "naam")
     String naam;
-    @ColumnInfo(name = "fotoId")
     int fotoId;
-
-    @ColumnInfo(name = "foto")
     byte[] foto;
 
 
+    public Product(){
 
-    public Product(String naam,int fotoId, byte[] foto) {
+    }
+    public Product(int id, String naam,int fotoId, byte[] foto) {
+        this.id = id;
         this.naam = naam;
         this.fotoId = fotoId;
         this.foto = foto;
@@ -51,7 +49,7 @@ public class Product implements Serializable {
         return fotoId;
     }
 
-    public void setFotoIdm(int fotoId) {
+    public void setFotoId(int fotoId) {
         this.fotoId = fotoId;
     }
 

@@ -9,4 +9,6 @@ public class DatabaseContract {
     public static final String COL_PRODUCT_NAME = "name";
     public static final String COL_PRODUCT_FOTO_ID = "foto_id";
     public static final String COL_PRODUCT_FOTO = "foto";
+
+    public static final String[] ALL_COLMUNS = {COL_PRODUCT_ID,COL_PRODUCT_NAME,COL_PRODUCT_FOTO_ID,COL_PRODUCT_FOTO};
 }

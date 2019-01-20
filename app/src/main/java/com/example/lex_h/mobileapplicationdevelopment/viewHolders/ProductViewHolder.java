@@ -1,14 +1,11 @@
 package com.example.lex_h.mobileapplicationdevelopment.viewHolders;
 
-import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.lex_h.mobileapplicationdevelopment.R;
-import com.example.lex_h.mobileapplicationdevelopment.activities.ProductActivity;
-import com.example.lex_h.mobileapplicationdevelopment.models.Product;
 
 public class ProductViewHolder extends RecyclerView.ViewHolder {
 

@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -38,7 +39,8 @@ public class ProductActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(),"Toegevoegd aan winkelwagen", Toast.LENGTH_LONG).show();
-                WinkelWagenHelper.addCart(product);
+                EditText editText = findViewById(R.id.editText2);
+                WinkelWagenHelper.addCart(product, Integer.parseInt(editText.getText().toString()));
             }
         });
 

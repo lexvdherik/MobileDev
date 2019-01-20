@@ -20,24 +20,24 @@ public class WinkelWagenHelper {
 
         return winkelWagen;
     }
-    public static void addCart(Product product) {
+    public static void addCart(Product product, int amount) {
         Boolean found = false;
         if(winkelWagen == null) {
             winkelWagen = new ArrayList<>();
             aantallen = new ArrayList<>();
             winkelWagen.add(product);
-            aantallen.add(1);
+            aantallen.add(amount);
         }else {
             for (int i = 0; i < winkelWagen.size(); i++) {
                 if (winkelWagen.get(i).getId() == product.getId()) {
-                    aantallen.set(i, (aantallen.get(i) + 1));
+                    aantallen.set(i, (aantallen.get(i) + amount));
                     found = true;
                     break;
                 }
             }
             if (!found){
                 winkelWagen.add(product);
-                aantallen.add(1);
+                aantallen.add(amount);
             }
         }
     }

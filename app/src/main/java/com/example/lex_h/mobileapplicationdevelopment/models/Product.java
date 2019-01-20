@@ -60,37 +60,4 @@ public class Product implements Serializable {
     public void setFoto(byte[] foto) {
         this.foto = foto;
     }
-
-    public static final String[] PRE_DEFINED_PRODUCT_NAMES = {
-            "GTA5",
-            "Google Chrome Cast",
-            "Iphone oortjes",
-            "Kast",
-            "Koelkast",
-            "Koffie apparaat",
-            "Laden kast",
-            "Product X",
-            "Speelgoed",
-            "Strijkijzer",
-            "Tafel",
-            "Walter Wallet"
-    };
-
-    public static final int[] PRE_DEFINED_PRODUCT_IMAGE_IDS = {
-
-            R.drawable.gta5,
-            R.drawable.google_chrome_cast,
-            R.drawable.iphone_oortjes,
-            R.drawable.kast,
-            R.drawable.koelkast,
-            R.drawable.koffie_apparaat,
-            R.drawable.laden_kast,
-            R.drawable.product_naam,
-            R.drawable.speelgoed,
-            R.drawable.strijkijzer,
-            R.drawable.tafel,
-            R.drawable.walter_wallet
-
-    };
-
 }

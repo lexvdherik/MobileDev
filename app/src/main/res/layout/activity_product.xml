@@ -4,64 +4,81 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.ProductActivity">
+    tools:context=".activities.ProductActivity"
+    tools:layout_editor_absoluteY="73dp">
 
     <android.support.v7.widget.AppCompatImageView
         android:id="@+id/productActivityProductFotoImageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="148dp"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="82dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <android.support.v7.widget.AppCompatTextView
         android:id="@+id/productActivityProductNaamTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="43dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@id/productActivityProductFotoImageView"
-        app:layout_constraintVertical_bias="0.372" />
+        app:layout_constraintEnd_toEndOf="@+id/productActivityProductFotoImageView"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="@+id/productActivityProductFotoImageView"
+        app:layout_constraintTop_toBottomOf="@+id/productActivityProductFotoImageView"
+        app:layout_constraintVertical_bias="0.22000003" />
 
     <android.support.v7.widget.AppCompatButton
         android:id="@+id/productActivityButton"
-        android:layout_width="124dp"
-        android:layout_height="44dp"
-        android:layout_marginStart="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginStart="60dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="112dp"
-        android:text="Toevoegen"
+        android:layout_marginBottom="8dp"
+        android:text="@string/button_toevoegen"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/productActivityWinkelWagenButton"
-        app:layout_constraintHorizontal_bias="0.734"
+        app:layout_constraintEnd_toStartOf="@+id/productActivityProductNaamTextView"
+        app:layout_constraintHorizontal_bias="0.39"
         app:layout_constraintStart_toStartOf="parent" />
 
     <android.support.v7.widget.AppCompatButton
         android:id="@+id/productActivityWinkelWagenButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="56dp"
-        android:layout_marginBottom="108dp"
-        android:text="WinkelWagen"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/button_winkelwagen"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.862"
+        app:layout_constraintStart_toEndOf="@+id/productActivityButton"
+        app:layout_constraintTop_toTopOf="@+id/productActivityButton"
+        app:layout_constraintVertical_bias="0.85" />
 
     <EditText
         android:id="@+id/editText2"
-        android:layout_width="124dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="164dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.192"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:text="1"
+        app:layout_constraintBottom_toTopOf="@+id/productActivityButton"
+        app:layout_constraintEnd_toEndOf="@+id/productActivityButton"
+        app:layout_constraintStart_toStartOf="@+id/productActivityButton" />
+
+    <android.support.constraint.Group
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

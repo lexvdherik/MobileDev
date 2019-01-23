@@ -18,6 +18,8 @@ import com.example.lex_h.mobileapplicationdevelopment.models.Product;
 
 public class ProductActivity extends AppCompatActivity {
 
+    final int MAX_PRODUCTS = 100;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,22 +35,31 @@ public class ProductActivity extends AppCompatActivity {
         Bitmap bmp = BitmapFactory.decodeByteArray(product.getFoto(), 0, product.getFoto().length);
         productImageView.setImageBitmap(bmp);
         productTextView.setText(product.getNaam());
-
+        final EditText editText = findViewById(R.id.editText2);
 
         productButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"Toegevoegd aan winkelwagen", Toast.LENGTH_LONG).show();
-                EditText editText = findViewById(R.id.editText2);
-                WinkelWagenHelper.addCart(product, Integer.parseInt(editText.getText().toString()));
+                if (editText.getText().toString().isEmpty()){
+                    Toast.makeText(getApplicationContext(),R.string.not_enough_products,Toast.LENGTH_LONG).show();
+                }else if(Integer.parseInt(editText.getText().toString()) > MAX_PRODUCTS){
+                    Toast.makeText(getApplicationContext(),R.string.to_many_products,Toast.LENGTH_LONG).show();
+                } else{
+                    Toast.makeText(getApplicationContext(), R.string.add_to_winkelwagen, Toast.LENGTH_LONG).show();
+                    WinkelWagenHelper.addCart(product, Integer.parseInt(editText.getText().toString()));
+                }
             }
         });
 
         productWinkelWagenButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), WinkelWagenActivity.class);
-                v.getContext().startActivity(intent);
+                if (WinkelWagenHelper.getCart().isEmpty()){
+
+                }else {
+                    Intent intent = new Intent(v.getContext(), WinkelWagenActivity.class);
+                    v.getContext().startActivity(intent);
+                }
             }
         });
     }

@@ -17,7 +17,6 @@ public class WinkelActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_winkel);
-
         db = new DatabaseHelper(this);
 
         RecyclerView productRecyclerView = findViewById(R.id.productRecyclerView);

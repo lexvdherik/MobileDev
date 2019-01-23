@@ -15,19 +15,13 @@ public class WinkelWagenActivity extends ListActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
         setListAdapter(new WinkelWagenProductAdapter(this,WinkelWagenHelper.getCart()) );
-
-        ListView listView = getListView();
-        listView.setTextFilterEnabled(true);
+        
     }
 
     @Override
     protected void onListItemClick(ListView l, View v, int position, long id) {
 
-        //get selected items
-//        String selectedValue = (String) getListAdapter().getItem(position);
-//        Toast.makeText(this, selectedValue, Toast.LENGTH_SHORT).show();
 
     }
 }

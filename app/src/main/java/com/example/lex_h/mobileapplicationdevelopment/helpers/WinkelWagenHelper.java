@@ -10,14 +10,10 @@ import java.util.List;
 
 public class WinkelWagenHelper {
 
-    private static List<Product> winkelWagen;
-    private static List<Integer> aantallen;
+    private static List<Product> winkelWagen = new ArrayList<>();
+    private static List<Integer> aantallen = new ArrayList<>();
 
     public static List<Product> getCart() {
-        if(winkelWagen == null) {
-            winkelWagen = new ArrayList<>();
-        }
-
         return winkelWagen;
     }
     public static void addCart(Product product, int amount) {
@@ -43,10 +39,6 @@ public class WinkelWagenHelper {
     }
 
     public static List<Integer> getAantallen(){
-        if(aantallen == null) {
-            aantallen = new ArrayList<>();
-        }
-
         return aantallen;
     }
 }

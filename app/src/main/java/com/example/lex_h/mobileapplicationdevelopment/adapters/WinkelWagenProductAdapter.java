@@ -5,15 +5,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.lex_h.mobileapplicationdevelopment.R;
-import com.example.lex_h.mobileapplicationdevelopment.activities.WinkelWagenActivity;
 import com.example.lex_h.mobileapplicationdevelopment.helpers.WinkelWagenHelper;
 import com.example.lex_h.mobileapplicationdevelopment.models.Product;
 
-import java.util.HashMap;
 import java.util.List;
 
 public class WinkelWagenProductAdapter extends ArrayAdapter<Product> {
@@ -35,8 +32,8 @@ public class WinkelWagenProductAdapter extends ArrayAdapter<Product> {
         if(convertView == null ) {
             convertView = inflater.inflate(R.layout.activity_winkel_wagen, parent, false);
 
-            holder.naam = convertView.findViewById(R.id.aaa);
-            holder.aantal = convertView.findViewById(R.id.bbb);
+            holder.naam = convertView.findViewById(R.id.winkelWagenProductNaam);
+            holder.aantal = convertView.findViewById(R.id.winkelWagenPoductHoeveelheid);
             convertView.setTag(holder);
         }else{
             holder = (ViewHolder) convertView.getTag();

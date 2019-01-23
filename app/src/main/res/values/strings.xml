@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">MobileApplicationDevelopment</string>
+    <string name="add_to_winkelwagen">Toegevoegd aan winkelwagen</string>
+    <string name="to_many_products">U kunt niet zoveel producten toevoegen</string>
+    <string name="not_enough_products">U moet minimaal 1 product toevoegen</string>
+    <string name="button_toevoegen">Toevoegen</string>
+    <string name="button_winkelwagen">Winkelwagen</string>
 </resources>

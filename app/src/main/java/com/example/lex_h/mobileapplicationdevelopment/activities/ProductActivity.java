@@ -19,6 +19,7 @@ import com.example.lex_h.mobileapplicationdevelopment.models.Product;
 public class ProductActivity extends AppCompatActivity {
 
     final int MAX_PRODUCTS = 100;
+    final int MAX_LENGTH_OF_INT_STRING = 10;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +43,7 @@ public class ProductActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (editText.getText().toString().isEmpty()){
                     Toast.makeText(getApplicationContext(),R.string.not_enough_products,Toast.LENGTH_LONG).show();
-                }else if(Integer.parseInt(editText.getText().toString()) > MAX_PRODUCTS){
+                }else if(editText.getText().length()> MAX_LENGTH_OF_INT_STRING||Integer.parseInt(editText.getText().toString()) > MAX_PRODUCTS){
                     Toast.makeText(getApplicationContext(),R.string.to_many_products,Toast.LENGTH_LONG).show();
                 } else{
                     Toast.makeText(getApplicationContext(), R.string.add_to_winkelwagen, Toast.LENGTH_LONG).show();
